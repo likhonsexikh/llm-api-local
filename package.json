@@ -1,0 +1,14 @@
+{
+  "name": "llm-api-local",
+  "version": "0.1.0",
+  "description": "Run OpenAI-compatible AI models locally using Docker Model Runner",
+  "main": "src/javascript/client.js",
+  "scripts": {
+    "test": "node tests/test_js_client.test.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "openai": "^4.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,23 @@
+version: '3.8'
+
+# This Docker Compose file provides an alternative method for running the local model server.
+# It is equivalent to running `docker model run ai/smollm2`.
+#
+# To use this file, run:
+#   docker-compose up
+#
+# To stop the server, run:
+#   docker-compose down
+
+services:
+  local-llm-server:
+    # This assumes that 'ai/smollm2' is a standard container image that can be pulled from a registry.
+    # The `docker model` commands may have special handling for these images.
+    image: ai/smollm2
+    container_name: local-llm-server
+    ports:
+      # This maps port 8080 on the host to port 8080 in the container,
+      # which is the default for the OpenAI-compatible API.
+      - "8080:8080"
+    # The default command from the image should start the server. If it doesn't,
+    # a specific 'command' might need to be added here.
